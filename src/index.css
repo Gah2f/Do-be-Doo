@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+body {
+    @apply bg-[url('/imgs/shaggy-and-scooby-doo.jpg')] bg-cover bg-center bg-no-repeat h-screen w-full;
+  }

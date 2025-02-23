@@ -29,9 +29,13 @@ function Todo() {
   }
   
   return (
-    <div className='max-w-4xl mx-auto sm:mt-8 p-4 bg-gray-100 rounded'>
-        <h2 className='mt-3 mb-6 text-2xl font-bold text-center text-green-900 uppercase'>Do-Be-Doo</h2>
-        <div className='flex items-center mb-4'>
+    <div>
+      <nav className='bg-teal-900 p-4 shadow-lg'>
+        <h2 className='mt-3 mb-6 text-2xl font-bold text-center text-[#E7C7A1] uppercase'>Do-Be-Doo 🐶</h2>
+      </nav>
+    <div className="w-full mx-auto sm:mt-8 p-4  rounded">
+ 
+        <div className="flex items-center mb-4  ">
           <input className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500'
                  type="text" 
                  name='text'
@@ -40,7 +44,7 @@ function Todo() {
                  value={newTodo} 
                  onChange={(e) => setNewTodo(e.target.value)}/>
 
-                 <button onClick={handleAddTodoClick} className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none'>
+                 <button onClick={handleAddTodoClick} className='ml-4 p-2 bg-[#00A6A6] text-white rounded hover:bg-blue-600 focus:outline-none'>
                   <MdOutlineAddBox size={24}/>
                  </button>
         </div>
@@ -55,13 +59,15 @@ function Todo() {
             placeholder='Search here'
             value={searchTerm}
             onChange={(e)=> handleSearch(e.target.value)} />
-              <button className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none'>
+              <button className='ml-4 p-2 bg-[#00A6A6] text-white rounded hover:bg-blue-600 focus:outline-none'>
               <IoSearchOutline /> 
               </button>
           </div>
         </div>
         <ToDoList/>
     </div>
+    </div>
+    
   )
 }
 
